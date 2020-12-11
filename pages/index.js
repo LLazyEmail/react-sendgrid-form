@@ -8,7 +8,7 @@ const Home = () => (
   <>
     <Layout>
       <Header>
-        <Title type="secondary">React send grid form</Title>
+        <Title type="success">React send grid form</Title>
       </Header>
       <Content>
         <SendForm />

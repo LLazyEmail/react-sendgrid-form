@@ -2,70 +2,43 @@ import React from 'react';
 import {
   Form, Input, Button, Col, Row, Space,
 } from 'antd';
+import Old2019 from '../Forms/Old2019';
+import BaaCreditsFinished from '../Forms/BaaCreditsFinished';
+import GotFlaggedAsBaa from '../Forms/GotFlaggedAsBaa';
+import PromotionalStoryDetected from '../Forms/PromotionalStoryDetected/PromotionalStoryDetected';
+import BrandsAsAuthorStory from '../Forms/BrandsAsAuthorStory/BrandsAsAuthorStory';
+import BrandsAsAuthorCredits from '../Forms/BrandsAsAuthorCredits/BrandsAsAuthorCredits';
 
 const SendForm = () => {
-  const onFinish = ({email}) => {
-    console.log('Success:', email);
-    fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email })
-    })
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
   return (
-    <Row>
-      <Col span={8} />
-      <Col span={8} style={{ marginTop: '100px' }}>
-        <Form
-          name="basic"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-        >
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your username!',
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-
-          <Row>
-            <Space>
-              <Form.Item>
-                <Button type="primary" htmlType="submit">
-                  Submit 1 layout
-                </Button>
-              </Form.Item>
-              <Form.Item>
-                <Button type="primary" htmlType="submit">
-                  Submit 2 layout
-                </Button>
-              </Form.Item>
-              <Form.Item>
-                <Button type="primary" htmlType="submit">
-                  Submit 3 layout
-                </Button>
-              </Form.Item>
-            </Space>
-          </Row>
-        </Form>
-      </Col>
-      <Col span={8} />
-    </Row>
+      <>
+        <Row style={{ marginTop: '100px' }} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Col span={3} />
+            <Col span={6}>
+                <Old2019 />
+            </Col>
+            <Col span={6} >
+                <BaaCreditsFinished />
+            </Col>
+            <Col span={6} >
+                <GotFlaggedAsBaa />
+            </Col>
+            <Col span={3} />
+        </Row>
+        <Row style={{ marginTop: '100px' }} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Col span={3} />
+            <Col span={6}>
+                <PromotionalStoryDetected />
+            </Col>
+            <Col span={6} >
+                <BrandsAsAuthorCredits />
+            </Col>
+            <Col span={6} >
+                <BrandsAsAuthorStory />
+            </Col>
+            <Col span={3} />
+        </Row>
+    </>
   );
 };
 
