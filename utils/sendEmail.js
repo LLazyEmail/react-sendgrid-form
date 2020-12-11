@@ -2,36 +2,38 @@ import fetch from 'node-fetch';
 
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send';
 
-const sendEmail = async ({ name, email }) => {
-  await fetch(SENDGRID_API, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: process.env.SENDGRID_API_KEY,
-    },
-    body: JSON.stringify({
-      personalizations: [
-        {
-          to: [
-            {
-              email,
+const sendEmail = async ({ email }) => {
+    try {
+        const res = await fetch(SENDGRID_API, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
             },
-          ],
-          subject: 'Demo success :)',
-        },
-      ],
-      from: {
-        email: 'noreply@demo.com',
-        name: 'Test SendGrid',
-      },
-      content: [
-        {
-          type: 'text/html',
-          value: `Congratulations <b>${name}</b>, you just sent an email with sendGrid`,
-        },
-      ],
-    }),
-  });
+            body: JSON.stringify({
+                from: {
+                    email: 'support@hackernoon.com',
+                    name: 'Hackernoon',
+                  },
+                personalizations: [
+                    {
+                    to: [
+                        {
+                        email,
+                        },
+                    ],
+                    subject: 'Demo success :)',
+                    },
+                ],
+                template_id: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            })
+          })
+          const status = await res.text();
+          console.log(status);
+    } catch (error) {
+        console.log(error);
+    }
+  
 };
 
 export { sendEmail };
