@@ -1,65 +1,64 @@
 import React from 'react';
 import {
-    Form, Input, Button, Col, Row, Space, Typography
-  } from 'antd';
+  Form, Input, Button, Col, Row, Space, Typography,
+} from 'antd';
 
-  const { Title } = Typography;
+const { Title } = Typography;
 
 const Old2019 = () => {
+  const onFinish = ({ email, type }) => {
+    console.log('Success:', email, type);
+    fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, type }),
+    });
+  };
 
-    const onFinish = ({email, type}) => {
-        console.log('Success:', email, type);
-        fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+  return (
+    <>
+      <Title level={2}>Old 2019 version</Title>
+
+      <Form
+        name="basic"
+        layout="vertical"
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+      >
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your email!',
             },
-            body: JSON.stringify({ email, type })
-        })
-      };
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
-    return (
-        <>
-            <Title level={2}>Old 2019 version</Title>
-        
-            <Form
-            name="basic"
-            layout="vertical"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            >
-            <Form.Item
-                label="Email"
-                name="email"
-                rules={[
-                {
-                    required: true,
-                    message: 'Please input your email!',
-                },
-                ]}
-            >
-                <Input />
-            </Form.Item>
+        <Form.Item
+          label="type"
+          hidden
+          name="type"
+          initialValue={1}
+        >
+          <Input />
+        </Form.Item>
 
-            <Form.Item
-                label="type"
-                hidden={true}
-                name="type"
-                initialValue={1}
-            >
-                <Input />
-            </Form.Item>
-
-            <Form.Item>
-                    <Button type="primary" htmlType="submit">
-                    Submit 1 layout
-                    </Button>
-                </Form.Item>
-            </Form>
-        </>
-    )
-}
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Submit 1 layout
+          </Button>
+        </Form.Item>
+      </Form>
+    </>
+  );
+};
 
 export default Old2019;
