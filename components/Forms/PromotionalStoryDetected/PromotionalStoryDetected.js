@@ -7,14 +7,14 @@ import {
 
 const PromotionalStoryDetected = () => {
 
-    const onFinish = ({email, full_name, url, time}) => {
-        console.log('Success:', email);
+    const onFinish = ({type, email, full_name, url, time}) => {
+        console.log('Success:', type, email, full_name, url, time);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ type, email, full_name, url, time })
         })
       };
 
@@ -23,12 +23,19 @@ const PromotionalStoryDetected = () => {
             <Title level={2}>Promotional story detected #writers</Title>
         
             <Form
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
+                name="basic"
+                layout="vertical"
+                onFinish={onFinish}
             >
+             <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={4}
+            >
+                <Input />
+            </Form.Item> 
+
             <Form.Item
                 label="Email"
                 name="email"

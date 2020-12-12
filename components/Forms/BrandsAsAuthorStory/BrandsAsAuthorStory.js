@@ -1,34 +1,41 @@
 import React from 'react';
 import {
-    Form, Input, Button, Col, Row, Space, Typography
+    Form, Input, Button, Checkbox, Col, Row, Space, Typography
   } from 'antd';
 
   const { Title } = Typography;
 
 const BrandsAsAuthorStory = () => {
 
-    const onFinish = ({email, handle, storyTitle, hasCredits}) => {
-        console.log('Success:', email);
+    const onFinish = ({type, email, handle, storyTitle, hasCredits }) => {
+        console.log('Success:', type, email, handle, storyTitle, hasCredits);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ type, email, handle, storyTitle, hasCredits })
         })
       };
 
     return (
         <>
-            <Title level={2}>Promotional story detected #writers</Title>
+            <Title level={2}>Brand as Author Story Submitted #sponsors</Title>
         
             <Form
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
+                name="basic"
+                layout="vertical"
+                onFinish={onFinish}
             >
+            <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={6}
+            >
+                <Input />
+            </Form.Item>
+
             <Form.Item
                 label="Email"
                 name="email"
@@ -68,14 +75,9 @@ const BrandsAsAuthorStory = () => {
             <Form.Item
                 label="Has Credits"
                 name="hasCredits"
-                rules={[
-                {
-                    required: true,
-                    message: 'Please input your username!',
-                },
-                ]}
+                valuePropName="checked"
             >
-                <Input />
+                <Checkbox>Has Credits?</Checkbox>
             </Form.Item>
 
             <Form.Item>

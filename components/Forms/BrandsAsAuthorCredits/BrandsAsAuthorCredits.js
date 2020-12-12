@@ -7,14 +7,14 @@ import {
 
 const BrandsAsAuthorCredits = () => {
 
-    const onFinish = ({email}) => {
-        console.log('Success:', email);
+    const onFinish = ({type, email}) => {
+        console.log('Success:', type, email);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ type, email })
         })
       };
 
@@ -23,12 +23,20 @@ const BrandsAsAuthorCredits = () => {
             <Title level={2}>Brand As Author Credits Purchased V1</Title>
         
             <Form
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
+                name="basic"
+                layout="vertical"
+                onFinish={onFinish}
             >
+
+            <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={5}
+            >
+                <Input />
+            </Form.Item> 
+
             <Form.Item
                 label="Email"
                 name="email"

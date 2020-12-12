@@ -7,14 +7,14 @@ import {
 
 const BaaCreditsFinished = () => {
 
-    const onFinish = ({email, first_name}) => {
-        console.log('Success:', email);
+    const onFinish = ({type, email, first_name}) => {
+        console.log('Success:', email, first_name);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ type, email, first_name })
         })
       };
 
@@ -23,12 +23,20 @@ const BaaCreditsFinished = () => {
             <Title level={2}>BAA Credits Finished #sponsors</Title>
         
             <Form
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
+                name="basic"
+                onFinish={onFinish}
+                layout="vertical"
             >
+
+            <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={2}
+            >
+                <Input />
+            </Form.Item>
+
             <Form.Item
                 label="Email"
                 name="email"

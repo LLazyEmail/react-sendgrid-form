@@ -2,13 +2,75 @@ const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const sendEmail = ({ email }) => { 
-    const msg = {
-        to: email,
-        from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
-        subject: 'Sending with Twilio SendGrid is Fun',
-        templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
-    };
+const sendEmail = ({ type, email, first_name, article_link, article_title, brand, full_name, url, time, handle, storyTitle, hasCredits }) => { 
+
+    let msg = {};
+
+    switch (type) {
+        case 1:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        case 2:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        case 3:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        case 4:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        case 5:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        case 6:
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        default: {
+            msg = {
+                to: email,
+                from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+                subject: 'Sending with Twilio SendGrid is Fun',
+                templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+            };
+            break;
+        }
+    }   
+    // const msg = {
+    //     to: email,
+    //     from: 'Hackernoon <support@hackernoon.com>', // Use the email address or domain you verified above
+    //     subject: 'Sending with Twilio SendGrid is Fun',
+    //     templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
+    // };
   //ES6
   
   sgMail
@@ -21,38 +83,5 @@ const sendEmail = ({ email }) => {
       }
     });
 }
-// const sendEmail = async ({ email }) => {
-//     try {
-//         const res = await fetch(SENDGRID_API, {
-//             method: 'POST',
-//             headers: {
-//               'Content-Type': 'application/json',
-//               Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
-//             },
-//             body: JSON.stringify({
-//                 from: {
-//                     email: 'support@hackernoon.com',
-//                     name: 'Hackernoon',
-//                   },
-//                 personalizations: [
-//                     {
-//                     to: [
-//                         {
-//                         email,
-//                         },
-//                     ],
-//                     subject: 'Demo success :)',
-//                     },
-//                 ],
-//                 template_id: 'd-dc18336cd62d40fba8820bccb351aa8f',
-//             })
-//           })
-//           const status = await res.text();
-//           console.log(status);
-//     } catch (error) {
-//         console.log(error);
-//     }
-  
-// };
 
 export { sendEmail };

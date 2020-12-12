@@ -7,14 +7,14 @@ import {
 
 const Old2019 = () => {
 
-    const onFinish = ({email}) => {
-        console.log('Success:', email);
+    const onFinish = ({email, type}) => {
+        console.log('Success:', email, type);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ email, type })
         })
       };
 
@@ -24,6 +24,7 @@ const Old2019 = () => {
         
             <Form
             name="basic"
+            layout="vertical"
             initialValues={{
                 remember: true,
             }}
@@ -35,9 +36,18 @@ const Old2019 = () => {
                 rules={[
                 {
                     required: true,
-                    message: 'Please input your username!',
+                    message: 'Please input your email!',
                 },
                 ]}
+            >
+                <Input />
+            </Form.Item>
+
+            <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={1}
             >
                 <Input />
             </Form.Item>

@@ -2,8 +2,9 @@ import { sendEmail } from '../../utils/sendEmail';
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    const { email } = req.body;
-    await sendEmail({ email });
+    const body = req.body;
+    console.log( body );
+    await sendEmail(body);
     return res.status(200).end();
   }
   return res.status(404).json({

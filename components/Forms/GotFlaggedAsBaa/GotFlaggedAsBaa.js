@@ -7,14 +7,14 @@ import {
 
 const GotFlaggedAsBaa = () => {
 
-    const onFinish = ({email, first_name, article_link, article_title, brand}) => {
-        console.log('Success:', email);
+    const onFinish = ({ type, email, first_name, article_link, article_title, brand }) => {
+        console.log('Success:', type, email, first_name, article_link, article_title, brand);
         fetch('/api/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ type, email, first_name, article_link, article_title, brand })
         })
       };
 
@@ -23,12 +23,20 @@ const GotFlaggedAsBaa = () => {
             <Title level={2}>got flagged as BAA #sponsors</Title>
         
             <Form
-            name="basic"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
+                name="basic"
+                layout="vertical"
+                onFinish={onFinish}
             >
+
+            <Form.Item
+                label="type"
+                hidden={true}
+                name="type"
+                initialValue={3}
+            >
+                <Input />
+            </Form.Item>
+
             <Form.Item
                 label="Email"
                 name="email"
