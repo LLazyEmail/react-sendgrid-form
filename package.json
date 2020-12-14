@@ -12,7 +12,7 @@
     "@ant-design/icons": "4.3.0",
     "@next/bundle-analyzer": "10.0.3",
     "@sendgrid/mail": "7.4.0",
-    "antd": "4.9.2",
+    "antd": "4.9.3",
     "babel-plugin-import": "1.13.3",
     "cross-env": "7.0.3",
     "dayjs": "1.9.7",
