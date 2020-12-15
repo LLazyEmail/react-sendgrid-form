@@ -1,7 +1,10 @@
 import { Menu } from 'antd';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Nav = () => {
+    const router = useRouter();
+
     return (
         <Menu
             mode="inline"
