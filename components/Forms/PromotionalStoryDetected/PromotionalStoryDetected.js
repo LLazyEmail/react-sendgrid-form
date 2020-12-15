@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Form, Input, Button, Col, Row, Space, Typography,
+  Form, Input, Button, Typography,
 } from 'antd';
 
 const { Title } = Typography;
@@ -9,7 +9,6 @@ const PromotionalStoryDetected = () => {
   const onFinish = ({
     type, email, full_name, url, time,
   }) => {
-    console.log('Success:', type, email, full_name, url, time);
     fetch('/api/send-email', {
       method: 'POST',
       headers: {

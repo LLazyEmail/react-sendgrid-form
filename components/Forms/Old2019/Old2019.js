@@ -1,13 +1,12 @@
 import React from 'react';
 import {
-  Form, Input, Button, Col, Row, Space, Typography,
+  Form, Input, Button, Typography,
 } from 'antd';
 
 const { Title } = Typography;
 
 const Old2019 = () => {
   const onFinish = ({ email, type }) => {
-    console.log('Success:', email, type);
     fetch('/api/send-email', {
       method: 'POST',
       headers: {

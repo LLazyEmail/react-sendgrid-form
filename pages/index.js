@@ -1,5 +1,4 @@
 import { Typography } from 'antd';
-import SendForm from '../components/SendForm';
 
 const { Title } = Typography;
 

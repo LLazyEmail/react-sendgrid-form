@@ -23,7 +23,7 @@ const sendEmail = ({
         subject: 'Sending with Twilio SendGrid is Fun',
         templateId: 'd-5ae6d711deb14a8485a60d7f247cd117',
         dynamicTemplateData: {
-            first_name
+          first_name,
         },
       };
       break;
@@ -34,10 +34,10 @@ const sendEmail = ({
         subject: 'Sending with Twilio SendGrid is Fun',
         templateId: 'd-722b54a3b56a497a9c9124d273b7f641',
         dynamicTemplateData: {
-            first_name,
-            article_link,
-            article_title,
-            brand
+          first_name,
+          article_link,
+          article_title,
+          brand,
         },
       };
       break;
@@ -48,9 +48,9 @@ const sendEmail = ({
         subject: 'Sending with Twilio SendGrid is Fun',
         templateId: 'd-87d998d5e4064de1be6dc56b0790b9fb',
         dynamicTemplateData: {
-            full_name,
-            url,
-            time
+          full_name,
+          url,
+          time,
         },
       };
       break;
@@ -69,9 +69,9 @@ const sendEmail = ({
         subject: 'Sending with Twilio SendGrid is Fun',
         templateId: 'd-dc18336cd62d40fba8820bccb351aa8f',
         dynamicTemplateData: {
-            handle,
-            storyTitle,
-            hasCredits
+          handle,
+          storyTitle,
+          hasCredits,
         },
       };
       break;

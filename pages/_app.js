@@ -3,13 +3,10 @@ import '../styles/vars.css';
 import '../styles/global.css';
 import PageLayout from '../components/Layout';
 
-const MyApp = ({ Component, pageProps }) => {
-  return (
-    <PageLayout>
-        <Component {...pageProps} />
-    </PageLayout>
-  )
-}
-
+const MyApp = ({ Component, pageProps }) => (
+  <PageLayout>
+    <Component {...pageProps} />
+  </PageLayout>
+);
 
 export default MyApp;
