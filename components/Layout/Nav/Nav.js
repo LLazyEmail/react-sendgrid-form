@@ -40,6 +40,11 @@ const Nav = () => (
           <a>BAA Story Submitted #sponsors</a>
         </Link>
       </Menu.Item>
+      <Menu.Item key="7">
+        <Link href="/baa/hackernoon-enquiry">
+          <a>Hacker Noon Enquiry Form</a>
+        </Link>
+      </Menu.Item>
     </Menu>
   </>
 );
