@@ -34,6 +34,7 @@ const Old2019 = () => {
           rules={[
             {
               required: true,
+              type: "email",
               message: 'Please input your email!',
             },
           ]}
@@ -51,8 +52,8 @@ const Old2019 = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit 1 layout
+          <Button type="primary" htmlType="submit" block>
+            Submit Old 2019
           </Button>
         </Form.Item>
       </Form>
