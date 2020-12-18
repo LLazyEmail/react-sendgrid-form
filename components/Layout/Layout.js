@@ -6,16 +6,18 @@ const { Title } = Typography;
 
 const PageLayout = ({ children }) => (
   <Layout style={{ height: '100vh' }}>
-    <Header style={{ textAlign: 'center' }}>
-      <Title type="success">React send grid forms</Title>
+    <Header style={{ textAlign: 'center', height: '80px' }}>
+      <Row justify="center" align="middle" style={{ height: '100%' }}>
+        <Title type="success">React send grid forms</Title>
+      </Row>
     </Header>
 
     <Layout>
-      <Sider width={250} style={{ paddingLeft: '10px' }}>
+      <Sider width={300} style={{ paddingLeft: '10px' }}>
         <Nav />
       </Sider>
-      <Content>
-        <Row justify="center">
+      <Content style={{ padding: '50px 0' }}>
+        <Row justify="center" align="middle">
           <Col>{children}</Col>
         </Row>
       </Content>

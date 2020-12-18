@@ -29,7 +29,7 @@ const BaaCreditsFinished = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Please input correct email!'
             }
           ]}>
           <Input />
@@ -40,15 +40,15 @@ const BaaCreditsFinished = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Please input first name!'
             }
           ]}>
           <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
+          <Button type="primary" htmlType="submit" block>
+            Submit form
           </Button>
         </Form.Item>
       </Form>
