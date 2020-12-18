@@ -4,8 +4,8 @@ import '../styles/global.css';
 import PageLayout from '../components/Layout';
 
 const MyApp = ({ Component, pageProps }) => (
-  <PageLayout>
-    <Component {...pageProps} />
+    <PageLayout>
+        <Component {...pageProps} />
   </PageLayout>
 );
 
