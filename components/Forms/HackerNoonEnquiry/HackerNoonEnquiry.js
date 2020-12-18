@@ -85,15 +85,16 @@ const HackerNoonEnquiry = () => {
         </Form.Item>
 
         <CheckboxGroup />
-
-        <RangePicker label="What date are you looking to have your ad live" />
+        <Form.Item label="What date are you looking to have your ad live?" name="date">
+            <RangePicker />
+        </Form.Item>
 
         <Form.Item label="Any other message for us?" name="message">
           <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" block>
             Submit
           </Button>
         </Form.Item>

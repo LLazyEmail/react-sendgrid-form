@@ -7,11 +7,19 @@ const CheckboxGroup = () => {
   };
 
   return (
-    <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
+    <Checkbox.Group style={{ width: '80%' }} onChange={onChange}>
+    <Row>
       <Checkbox value="A">Billboard Advertisement</Checkbox>
+    </Row>
+    <Row>
       <Checkbox value="B">Targeted Advertisement</Checkbox>
+    </Row>
+    <Row>
       <Checkbox value="C">Newsletters</Checkbox>
+    </Row>
+    <Row>
       <Checkbox value="D">Branded Stories</Checkbox>
+    </Row>
     </Checkbox.Group>
   );
 };
