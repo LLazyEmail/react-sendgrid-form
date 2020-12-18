@@ -1,20 +1,10 @@
-import { Layout, Typography } from 'antd';
-import SendForm from '../components/SendForm';
+import { Typography } from 'antd';
 
-const { Header, Footer, Content } = Layout;
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const Home = () => (
   <>
-    <Layout>
-      <Header>
-        <Title type="secondary">React send grid form</Title>
-      </Header>
-      <Content>
-        <SendForm />
-      </Content>
-      <Footer />
-    </Layout>
+    <Title level={2}>Forms</Title>
   </>
 );
 

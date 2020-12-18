@@ -1,7 +1,12 @@
 import 'antd/dist/antd.css';
 import '../styles/vars.css';
 import '../styles/global.css';
+import PageLayout from '../components/Layout';
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }) => (
+  <PageLayout>
+    <Component {...pageProps} />
+  </PageLayout>
+);
+
+export default MyApp;

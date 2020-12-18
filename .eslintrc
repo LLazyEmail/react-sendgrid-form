@@ -13,7 +13,8 @@
         "plugin:react/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
-        "plugin:jsx-a11y/recommended"
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -33,9 +34,13 @@
     },
     "plugins": [
         "react",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": [ 1,
+            { "usePrettierrc" : true }
+        ],
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [
             1,
@@ -54,6 +59,9 @@
         "react/jsx-props-no-spreading": 0,
         "jsx-a11y/control-has-associated-label": 0,
         "import/prefer-default-export": 0,
-        "max-len": 0
+        "react/jsx-closing-bracket-location": 0,
+        "max-len": 0,
+        "camelcase":"off",
+        "indent": 2
     }
 }
