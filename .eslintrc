@@ -34,7 +34,8 @@
     },
     "plugins": [
         "react",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
         "prettier/prettier": [ 1,
@@ -58,8 +59,9 @@
         "react/jsx-props-no-spreading": 0,
         "jsx-a11y/control-has-associated-label": 0,
         "import/prefer-default-export": 0,
+        "react/jsx-closing-bracket-location": 0,
         "max-len": 0,
         "camelcase":"off",
-        "indent": ["warn", 4]
+        "indent": 2
     }
 }

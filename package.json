@@ -5,7 +5,7 @@
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint . --ext js,jsx . --ignore-path ./.eslintignore",
+        "lint": "eslint --fix .",
         "lint:fix": "eslint --fix . --ignore-path ./.eslintignore",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
     },
@@ -35,10 +35,6 @@
         "eslint-plugin-react": "7.21.5",
         "eslint-plugin-react-hooks": "4.2.0",
         "prettier": "^2.2.1"
-    },
-    "browser": {
-        "fs": false,
-        "path": false
     },
     "license": "MIT"
 }
