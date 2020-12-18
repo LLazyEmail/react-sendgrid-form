@@ -33,3 +33,8 @@ Code samples:
 
 
 
+
+Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+
+![photo_2020-12-15_05-53-43 (2)](https://user-images.githubusercontent.com/1469198/102169513-10f0c680-3e9b-11eb-987e-70da1b46a9b1.jpg)
