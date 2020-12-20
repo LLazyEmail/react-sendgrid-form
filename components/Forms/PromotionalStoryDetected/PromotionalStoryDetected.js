@@ -35,7 +35,7 @@ const PromotionalStoryDetected = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Email is required!'
             }
           ]}>
           <Input />
@@ -46,7 +46,7 @@ const PromotionalStoryDetected = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Full Name is required!'
             }
           ]}>
           <Input />
@@ -57,7 +57,7 @@ const PromotionalStoryDetected = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Url is required!'
             }
           ]}>
           <Input />
@@ -68,15 +68,15 @@ const PromotionalStoryDetected = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Time is required!'
             }
           ]}>
           <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
+          <Button type="primary" htmlType="submit" block>
+            Submit form
           </Button>
         </Form.Item>
       </Form>

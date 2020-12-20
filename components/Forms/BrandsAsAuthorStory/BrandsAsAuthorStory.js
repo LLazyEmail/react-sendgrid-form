@@ -35,7 +35,7 @@ const BrandsAsAuthorStory = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Email is required!'
             }
           ]}>
           <Input />
@@ -46,7 +46,7 @@ const BrandsAsAuthorStory = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Handle is required!'
             }
           ]}>
           <Input />
@@ -57,7 +57,7 @@ const BrandsAsAuthorStory = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Story Title is required!'
             }
           ]}>
           <Input />
@@ -67,8 +67,8 @@ const BrandsAsAuthorStory = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
+          <Button type="primary" htmlType="submit" block>
+            Submit form
           </Button>
         </Form.Item>
       </Form>

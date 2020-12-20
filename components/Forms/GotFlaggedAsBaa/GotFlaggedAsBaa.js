@@ -36,7 +36,7 @@ const GotFlaggedAsBaa = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Please input correct email!'
             }
           ]}>
           <Input />
@@ -47,7 +47,7 @@ const GotFlaggedAsBaa = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'First Name is required!'
             }
           ]}>
           <Input />
@@ -58,7 +58,7 @@ const GotFlaggedAsBaa = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Article Link is required!'
             }
           ]}>
           <Input />
@@ -69,7 +69,7 @@ const GotFlaggedAsBaa = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Article Title Link is required!'
             }
           ]}>
           <Input />
@@ -80,15 +80,15 @@ const GotFlaggedAsBaa = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Brand Link is required!'
             }
           ]}>
           <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit
+          <Button type="primary" htmlType="submit" block>
+            Submit form
           </Button>
         </Form.Item>
       </Form>
