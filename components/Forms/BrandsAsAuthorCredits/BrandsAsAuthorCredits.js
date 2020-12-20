@@ -29,15 +29,16 @@ const BrandsAsAuthorCredits = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your username!'
+              message: 'Email is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Submit 1 layout
+          <Button type="primary" htmlType="submit" block>
+            Submit form
           </Button>
         </Form.Item>
       </Form>

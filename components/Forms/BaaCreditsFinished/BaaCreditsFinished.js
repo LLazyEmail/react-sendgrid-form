@@ -31,7 +31,8 @@ const BaaCreditsFinished = () => {
               required: true,
               message: 'Please input correct email!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -42,7 +43,8 @@ const BaaCreditsFinished = () => {
               required: true,
               message: 'Please input first name!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 
