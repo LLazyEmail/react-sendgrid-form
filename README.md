@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 `pages/index.js` - Template routing!  
 
 ## Forms
-1. Name: Old 2019 version
+1. Name: Old 2019 version  
 Template ID: d-dc18336cd62d40fba8820bccb351aa8f 
 
 `no variables`
@@ -35,9 +35,8 @@ Template ID: d-dc18336cd62d40fba8820bccb351aa8f
 
 ---
 
-2. Name: BAA Credits Finished #sponsors
-Template ID: d-5ae6d711deb14a8485a60d7f247cd117 
-Name: Version1.0
+2. Name: BAA Credits Finished #sponsors  
+Template ID: d-5ae6d711deb14a8485a60d7f247cd117  
 
 variables
 `{
@@ -48,11 +47,10 @@ variables
 
 ---
 
-3. Name: got flagged as BAA #sponsors
-Template ID: d-722b54a3b56a497a9c9124d273b7f641
-Version1.0
+3. Name: got flagged as BAA #sponsors  
+Template ID: d-722b54a3b56a497a9c9124d273b7f641  
 
-variables
+variables  
 `{
     "first_name":"string", 
     "article_link":"string",
@@ -64,11 +62,10 @@ variables
 
 ---
 
-4. Name: promotional story detected #writers
-Template ID: d-87d998d5e4064de1be6dc56b0790b9fb 
-Version1.0
+4. Name: promotional story detected #writers  
+Template ID: d-87d998d5e4064de1be6dc56b0790b9fb   
 
-variables
+variables  
 `{
     "full_name": "string", 
     "url":"string", 
@@ -79,25 +76,24 @@ variables
 
 ---
 
-5. Name: Brand As Author Credits Purchased V1
-Template ID: d-1b0b9282b2bb4b18b5056a22aa25f8fb 
+5. Name: Brand As Author Credits Purchased V1  
+Template ID: d-1b0b9282b2bb4b18b5056a22aa25f8fb   
 
 
 `no variables`
 
 ---
 
-6. Name: Brand as Author Story Submitted #sponsors
-Template ID: d-1b9ad22192214fb48ed3134fca11ea7a
-Version: Brand as Author Submitted
+6. Name: Brand as Author Story Submitted #sponsors  
+Template ID: d-1b9ad22192214fb48ed3134fca11ea7a  
 
-`
-{
+variables  
+`{
   "handle": "string",
   "storyTitle": "string",
   "hasCredits": boolean
-}
-`
+}`
+
 ![image](https://user-images.githubusercontent.com/1469198/102238724-c3a64080-3efe-11eb-9954-ea911b2c83b8.png)
 ---
 
