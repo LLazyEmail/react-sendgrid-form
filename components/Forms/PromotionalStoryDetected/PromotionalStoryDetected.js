@@ -37,7 +37,8 @@ const PromotionalStoryDetected = () => {
               required: true,
               message: 'Email is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -48,7 +49,8 @@ const PromotionalStoryDetected = () => {
               required: true,
               message: 'Full Name is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -59,7 +61,8 @@ const PromotionalStoryDetected = () => {
               required: true,
               message: 'Url is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -70,7 +73,8 @@ const PromotionalStoryDetected = () => {
               required: true,
               message: 'Time is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 

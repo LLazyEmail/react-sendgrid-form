@@ -36,7 +36,8 @@ const HackerNoonEnquiry = () => {
               required: true,
               message: 'Please input your Your Name!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -47,7 +48,8 @@ const HackerNoonEnquiry = () => {
               required: true,
               message: 'Please input your Email Address!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -58,7 +60,8 @@ const HackerNoonEnquiry = () => {
               required: true,
               message: 'Please input your Company Name!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -69,7 +72,8 @@ const HackerNoonEnquiry = () => {
               required: true,
               message: 'Please input Your Company Website!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -80,13 +84,16 @@ const HackerNoonEnquiry = () => {
               required: true,
               message: 'Please input your position at the company!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 
         <CheckboxGroup />
-        <Form.Item label="What date are you looking to have your ad live?" name="date">
-            <RangePicker />
+        <Form.Item
+          label="What date are you looking to have your ad live?"
+          name="date"
+          <RangePicker />
         </Form.Item>
 
         <Form.Item label="Any other message for us?" name="message">

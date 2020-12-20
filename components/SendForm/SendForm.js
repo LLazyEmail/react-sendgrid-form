@@ -16,7 +16,8 @@ const SendForm = () => (
         sm: 16,
         md: 24,
         lg: 32
-      }}>
+      }}
+    >
       <Col span={3} />
       <Col span={6}>
         <Old2019 />
@@ -36,7 +37,8 @@ const SendForm = () => (
         sm: 16,
         md: 24,
         lg: 32
-      }}>
+      }}
+    >
       <Col span={3} />
       <Col span={6}>
         <PromotionalStoryDetected />

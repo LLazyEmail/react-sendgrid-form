@@ -4,7 +4,14 @@ import { Form, Input, Button, Typography } from 'antd';
 const { Title } = Typography;
 
 const GotFlaggedAsBaa = () => {
-  const onFinish = ({ type, email, first_name, article_link, article_title, brand }) => {
+  const onFinish = ({
+    type,
+    email,
+    first_name,
+    article_link,
+    article_title,
+    brand
+  }) => {
     fetch('/api/send-email', {
       method: 'POST',
       headers: {
@@ -38,7 +45,8 @@ const GotFlaggedAsBaa = () => {
               required: true,
               message: 'Please input correct email!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -49,7 +57,8 @@ const GotFlaggedAsBaa = () => {
               required: true,
               message: 'First Name is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -60,7 +69,8 @@ const GotFlaggedAsBaa = () => {
               required: true,
               message: 'Article Link is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -71,7 +81,8 @@ const GotFlaggedAsBaa = () => {
               required: true,
               message: 'Article Title Link is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -82,7 +93,8 @@ const GotFlaggedAsBaa = () => {
               required: true,
               message: 'Brand Link is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 

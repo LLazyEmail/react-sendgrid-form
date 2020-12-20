@@ -24,7 +24,8 @@ const Old2019 = () => {
         initialValues={{
           remember: true
         }}
-        onFinish={onFinish}>
+        onFinish={onFinish}
+      >
         <Form.Item
           label="Email"
           name="email"
@@ -34,7 +35,8 @@ const Old2019 = () => {
               type: 'email',
               message: 'Please input correct email!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 

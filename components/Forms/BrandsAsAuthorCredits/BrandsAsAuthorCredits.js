@@ -31,7 +31,8 @@ const BrandsAsAuthorCredits = () => {
               required: true,
               message: 'Email is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
 

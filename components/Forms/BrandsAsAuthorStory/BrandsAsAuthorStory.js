@@ -37,7 +37,8 @@ const BrandsAsAuthorStory = () => {
               required: true,
               message: 'Email is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -48,7 +49,8 @@ const BrandsAsAuthorStory = () => {
               required: true,
               message: 'Handle is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item
@@ -59,7 +61,8 @@ const BrandsAsAuthorStory = () => {
               required: true,
               message: 'Story Title is required!'
             }
-          ]}>
+          ]}
+        >
           <Input />
         </Form.Item>
         <Form.Item label="Has Credits" name="hasCredits" valuePropName="checked">
