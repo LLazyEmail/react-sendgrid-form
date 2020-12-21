@@ -93,6 +93,7 @@ const HackerNoonEnquiry = () => {
         <Form.Item
           label="What date are you looking to have your ad live?"
           name="date"
+        >
           <RangePicker />
         </Form.Item>
 
