@@ -7,6 +7,7 @@ import BrandsAsAuthorStory from 'components/Forms/BrandsAsAuthorStory';
 import GotFlaggedAsBaa from 'components/Forms/GotFlaggedAsBaa';
 import Old2019 from 'components/Forms/Old2019';
 import PromotionalStoryDetected from 'components/Forms/PromotionalStoryDetected';
+import BrandsAsAuthorRejected from 'components/Forms/BrandsAsAuthorRejected';
 
 const Forms = () => {
   const router = useRouter();
@@ -28,6 +29,8 @@ const Forms = () => {
             return <BrandsAsAuthorCredits />;
           case 'story-submitted':
             return <BrandsAsAuthorStory />;
+          case 'story-rejected':
+            return <BrandsAsAuthorRejected />;
           case 'hackernoon-enquiry':
             return <HackerNoonEnquiry />;
           default:
