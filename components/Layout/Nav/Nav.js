@@ -40,6 +40,11 @@ const Nav = () => (
         </Link>
       </Menu.Item>
       <Menu.Item key="7">
+        <Link href="/baa/story-rejected">
+          <a>BAA Rejected Story</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="8">
         <Link href="/baa/hackernoon-enquiry">
           <a>Hacker Noon Enquiry Form</a>
         </Link>

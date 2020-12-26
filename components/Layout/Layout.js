@@ -18,7 +18,7 @@ const PageLayout = ({ children }) => (
       </Sider>
       <Content style={{ padding: '20px 0' }}>
         <Row justify="center" align="middle">
-          <Col xs={{ span: 20, offset: 1 }} lg={{ span: 10, offset: 2 }}>
+          <Col>
             {children}
           </Col>
         </Row>
