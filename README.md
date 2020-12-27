@@ -58,8 +58,6 @@ variables
     "brand":"string"
 }`
 
-![image](https://user-images.githubusercontent.com/1469198/102233530-0d8c2800-3ef9-11eb-9434-7bf360dba36e.png)
-
 ![image](https://user-images.githubusercontent.com/1469198/103174216-f6d6c100-4868-11eb-8bd7-8c2b597812b9.png)
 
 
