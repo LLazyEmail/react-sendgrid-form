@@ -82,6 +82,10 @@ Template ID: d-1b0b9282b2bb4b18b5056a22aa25f8fb
 
 `no variables`
 
+
+![image](https://user-images.githubusercontent.com/1469198/103173676-25eb3380-4865-11eb-8a34-44bf0014a1cc.png)
+
+
 ---
 
 6. Name: Brand as Author Story Submitted #sponsors  
@@ -110,6 +114,9 @@ variables `none`
 ![image](https://user-images.githubusercontent.com/1469198/103173575-92196780-4864-11eb-9bce-c12115d467a2.png)
 
 ---
+
+
+
 
 Code samples:
 
