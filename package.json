@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "4.3.0",
-    "@next/bundle-analyzer": "10.0.4",
+    "@next/bundle-analyzer": "10.0.5",
     "@sendgrid/mail": "7.4.1",
     "antd": "4.10.0",
     "babel-plugin-import": "1.13.3",
