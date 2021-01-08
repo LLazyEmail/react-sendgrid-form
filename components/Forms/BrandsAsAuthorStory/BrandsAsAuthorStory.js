@@ -1,23 +1,36 @@
-import React from 'react';
-import { Form, Input, Button, Checkbox, Typography } from 'antd';
+import React, { useState } from 'react';
+import { Form, Input, Button, Checkbox, Typography, Spin } from 'antd';
+import Notification from '../../../utils/notifications';
 
 const { Title } = Typography;
 
 const BrandsAsAuthorStory = () => {
-  const onFinish = ({ type, email, handle, storyTitle, hasCredits }) => {
-    fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        type,
-        email,
-        handle,
-        storyTitle,
-        hasCredits
-      })
-    });
+  const [isLoading, setIsLoading] = useState(false);
+  const onFinish = async ({ type, email, handle, storyTitle, hasCredits }) => {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          type,
+          email,
+          handle,
+          storyTitle,
+          hasCredits
+        })
+      });
+      if (response.status !== 200) {
+        Notification('error', response.statusText);
+      } else {
+        Notification('success');
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Notification('error', error);
+    }
   };
 
   return (
@@ -70,9 +83,17 @@ const BrandsAsAuthorStory = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" block>
-            Submit form
-          </Button>
+          {isLoading ? (
+            <Spin tip="Submiting...">
+              <Button type="primary" htmlType="submit" block>
+                Submit form
+              </Button>
+            </Spin>
+          ) : (
+            <Button type="primary" htmlType="submit" block>
+              Submit form
+            </Button>
+          )}
         </Form.Item>
       </Form>
     </>

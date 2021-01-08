@@ -1,10 +1,12 @@
-import React from 'react';
-import { Form, Input, Button, Typography, Image, Row, Col } from 'antd';
+import React, { useState } from 'react';
+import { Form, Input, Button, Typography, Image, Row, Col, Spin } from 'antd';
+import Notification from '../../../utils/notifications';
 
 const { Title } = Typography;
 
 const GotFlaggedAsBaa = () => {
-  const onFinish = ({
+  const [isLoading, setIsLoading] = useState(false);
+  const onFinish = async ({
     type,
     email,
     first_name,
@@ -12,20 +14,31 @@ const GotFlaggedAsBaa = () => {
     article_title,
     brand
   }) => {
-    fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        type,
-        email,
-        first_name,
-        article_link,
-        article_title,
-        brand
-      })
-    });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          type,
+          email,
+          first_name,
+          article_link,
+          article_title,
+          brand
+        })
+      });
+      if (response.status !== 200) {
+        Notification('error', response.statusText);
+      } else {
+        Notification('success');
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Notification('error', error);
+    }
   };
 
   return (
@@ -102,9 +115,17 @@ const GotFlaggedAsBaa = () => {
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" htmlType="submit" block>
-                Submit form
-              </Button>
+              {isLoading ? (
+                <Spin tip="Submiting...">
+                  <Button type="primary" htmlType="submit" block>
+                    Submit form
+                  </Button>
+                </Spin>
+              ) : (
+                <Button type="primary" htmlType="submit" block>
+                  Submit form
+                </Button>
+              )}
             </Form.Item>
           </Form>
         </Col>
