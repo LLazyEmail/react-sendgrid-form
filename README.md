@@ -4,7 +4,7 @@
 ![photo_2020-12-15_05-53-43 (2)](https://user-images.githubusercontent.com/1469198/102169513-10f0c680-3e9b-11eb-987e-70da1b46a9b1.jpg)
 ## Getting Started
 
-First, run the development server
+First, run the development server:
 
 ```bash
 npm run dev
