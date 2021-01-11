@@ -1,16 +1,16 @@
 import React from 'react';
 import { Form, Input } from 'antd';
 
-const MyInput = props => {
+const EmailInput = () => {
     return (
         <Form.Item
-              label={props.label}
-              name={props.name}
+              label='Email'
+              name='email'
               rules={[
                     {
                         required: true,
-                        type: props.type ? props.type : '',
-                        message: `Please input ${props.message}`
+                        type: 'email',
+                        message: `Please input correct email!`
                     }
                 ]}
             >
@@ -19,4 +19,4 @@ const MyInput = props => {
     )
 }
 
-export default MyInput;
+export default EmailInput;

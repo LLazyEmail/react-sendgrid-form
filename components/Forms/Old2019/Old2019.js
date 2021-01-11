@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Image, Row, Col, Spin } from 'antd';
 import Notification from '../../../utils/notifications';
-import MyInput from '../../test-components/Input';
+import EmailInput from '../../UI/EmailInput';
 
 const { Title } = Typography;
 
@@ -44,20 +44,7 @@ const Old2019 = () => {
             }}
             onFinish={onFinish}
           >
-            <MyInput label='Email' type='email' name='email' message='correct email!' />
-            {/* <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  type: 'email',
-                  message: 'Please input correct email!'
-                }
-              ]}
-            >
-              <Input />
-            </Form.Item> */}
+            <EmailInput />
 
             <Form.Item label="type" hidden name="type" initialValue={1}>
               <Input />
