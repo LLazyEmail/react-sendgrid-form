@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Spin } from 'antd';
+import { Form, Input, Button, Typography, Spin, Row, Col, Image } from 'antd';
 import Notification from '../../../utils/notifications';
 
 const { Title } = Typography;
@@ -29,40 +29,54 @@ const BrandsAsAuthorCredits = () => {
 
   return (
     <>
-      <Title level={2}>Brand As Author Credits Purchased V1</Title>
 
-      <Form name="basic" layout="vertical" onFinish={onFinish}>
-        <Form.Item label="type" hidden name="type" initialValue={5}>
-          <Input />
-        </Form.Item>
+      <Row justify="center" align="middle">
+        <Title level={2}>Brand As Author Credits Purchased V1</Title>
+      </Row>
 
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: 'Email is required!'
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
+      <Row>
+        <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10, offset: 1 }}>
+          <Form name="basic" layout="vertical" onFinish={onFinish}>
+            <Form.Item label="type" hidden name="type" initialValue={5}>
+              <Input />
+            </Form.Item>
 
-        <Form.Item>
-          {isLoading ? (
-            <Spin tip="Submiting...">
-              <Button type="primary" htmlType="submit" block>
-                Submit form
-              </Button>
-            </Spin>
-          ) : (
-            <Button type="primary" htmlType="submit" block>
-              Submit form
-            </Button>
-          )}
-        </Form.Item>
-      </Form>
+            <Form.Item
+              label="Email"
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  type: 'email',
+                  message: 'Email is required!'
+                }
+              ]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item>
+              {isLoading ? (
+                <Spin tip="Submiting...">
+                  <Button type="primary" htmlType="submit" block>
+                    Submit form
+                  </Button>
+                </Spin>
+              ) : (
+                <Button type="primary" htmlType="submit" block>
+                  Submit form
+                </Button>
+              )}
+            </Form.Item>
+          </Form>
+        </Col>
+        <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10 }}>
+          <Title level={4}>Example</Title>
+            <Image
+                src="/form-images/baa-credits-purchased.png"
+            />
+        </Col>
+      </Row>
     </>
   );
 };
