@@ -91,16 +91,17 @@ const sendEmail = ({
     }
   }
 
-  sgMail.send(msg).then(
-    () => {},
-    (error) => {
+  (async () => {
+    try {
+      await sgMail.send(msg);
+    } catch (error) {
       console.error(error);
-
+  
       if (error.response) {
-        console.error(error.response.body);
+        console.error(error.response.body)
       }
     }
-  );
+  })();
 };
 
 export { sendEmail };
