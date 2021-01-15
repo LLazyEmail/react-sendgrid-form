@@ -1,8 +1,7 @@
 import React from 'react';
 import { Form, Input } from 'antd';
 
-const EmailInput = () => {
-    return (
+const EmailInput = () => (
         <Form.Item
               label='Email'
               name='email'
@@ -16,7 +15,6 @@ const EmailInput = () => {
             >
               <Input />
         </Form.Item>
-    )
-}
+)
 
 export default EmailInput;
