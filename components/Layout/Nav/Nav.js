@@ -49,6 +49,11 @@ const Nav = () => (
           <a>Hacker Noon Enquiry Form</a>
         </Link>
       </Menu.Item>
+      <Menu.Item key="9">
+        <Link href="/baa/hackernoon-plagiarism">
+          <a>Plagiarism on Hacker Noon</a>
+        </Link>
+      </Menu.Item>
     </Menu>
   </>
 );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox, Typography, Spin } from 'antd';
+import { Form, Input, Button, Checkbox, Typography, Spin, Row, Col, Image } from 'antd';
 import Notification from '../../../utils/notifications';
 
 const { Title } = Typography;
@@ -35,67 +35,79 @@ const BrandsAsAuthorStory = () => {
 
   return (
     <>
-      <Title level={2}>Brand as Author Story Submitted #sponsors</Title>
+      <Row justify="center" align="middle">
+        <Title level={2}>Brand as Author Story Submitted #sponsors</Title>
+      </Row>
+      <Row>
+        <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10, offset: 1 }}>
+            <Form name="basic" layout="vertical" onFinish={onFinish}>
+                <Form.Item label="type" hidden name="type" initialValue={6}>
+                    <Input />
+                </Form.Item>
 
-      <Form name="basic" layout="vertical" onFinish={onFinish}>
-        <Form.Item label="type" hidden name="type" initialValue={6}>
-          <Input />
-        </Form.Item>
+                <Form.Item
+                    label="Email"
+                    name="email"
+                    rules={[
+                        {
+                        required: true,
+                        type: 'email',
+                        message: 'Email is required!'
+                        }
+                    ]}
+                >
+                    <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Handle"
+                    name="handle"
+                    rules={[
+                        {
+                        required: true,
+                        message: 'Handle is required!'
+                        }
+                    ]}
+                >
+                <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Story Title"
+                    name="storyTitle"
+                    rules={[
+                        {
+                        required: true,
+                        message: 'Story Title is required!'
+                        }
+                    ]}
+                >
+                <Input />
+                </Form.Item>
+                <Form.Item label="Has Credits" name="hasCredits" valuePropName="checked">
+                    <Checkbox>Has Credits?</Checkbox>
+                </Form.Item>
 
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: 'Email is required!'
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Handle"
-          name="handle"
-          rules={[
-            {
-              required: true,
-              message: 'Handle is required!'
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Story Title"
-          name="storyTitle"
-          rules={[
-            {
-              required: true,
-              message: 'Story Title is required!'
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item label="Has Credits" name="hasCredits" valuePropName="checked">
-          <Checkbox>Has Credits?</Checkbox>
-        </Form.Item>
-
-        <Form.Item>
-          {isLoading ? (
-            <Spin tip="Submiting...">
-              <Button type="primary" htmlType="submit" block>
-                Submit form
-              </Button>
-            </Spin>
-          ) : (
-            <Button type="primary" htmlType="submit" block>
-              Submit form
-            </Button>
-          )}
-        </Form.Item>
-      </Form>
+                <Form.Item>
+                    {isLoading ? (
+                        <Spin tip="Submiting...">
+                        <Button type="primary" htmlType="submit" block>
+                            Submit form
+                        </Button>
+                        </Spin>
+                    ) : (
+                        <Button type="primary" htmlType="submit" block>
+                        Submit form
+                        </Button>
+                    )}
+                </Form.Item>
+            </Form>
+        </Col>
+        <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10 }}>
+          <Title level={4}>Example</Title>
+            <Image
+                src="/form-images/baa-promotional-story.png"
+            />
+        </Col>
+      </Row>
     </>
   );
 };

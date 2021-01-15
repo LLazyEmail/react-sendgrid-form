@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Image, Row, Col, Spin } from 'antd';
 import Notification from '../../../utils/notifications';
-import EmailInput from '../../UI/EmailInput';
+// after my pull request we should import our email component
+// import EmailInput from '../../UI/EmailInput';  
 
 const { Title } = Typography;
 
-const Old2019 = () => {
+const PlagiarismOnHackerNoon = () => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({ email, type }) => {
     try {
@@ -32,7 +33,7 @@ const Old2019 = () => {
   return (
     <>
       <Row justify="center" align="middle">
-        <Title level={2}>Old 2019 version</Title>
+        <Title level={2}>Plagiarism on Hacker Noon</Title>
       </Row>
       <Row>
         <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10, offset: 1 }}>
@@ -44,7 +45,20 @@ const Old2019 = () => {
             }}
             onFinish={onFinish}
           >
-            <EmailInput />
+            {/* <EmailInput /> */}
+            <Form.Item
+                label="Email"
+                name="email"
+                rules={[
+                    {
+                    required: true,
+                    type: 'email',
+                    message: 'Email is required!'
+                    }
+                ]}
+                >
+                <Input />
+            </Form.Item>
 
             <Form.Item label="type" hidden name="type" initialValue={1}>
               <Input />
@@ -68,7 +82,7 @@ const Old2019 = () => {
         <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10 }}>
           <Title level={4}>Example</Title>
           <Image
-            src="/form-images/old-2019.png"
+            src="/form-images/plagiarism-on-hackernoon.png"
           />
         </Col>
       </Row>
@@ -76,4 +90,4 @@ const Old2019 = () => {
   );
 };
 
-export default Old2019;
+export default PlagiarismOnHackerNoon;

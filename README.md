@@ -121,6 +121,15 @@ variables `none`
 
 ---
 
+#### 9. Plagiarism on Hacker Noon
+Template ID: d-c9c2606f81064defb31d2c221c078ffd
+
+variables `none`
+
+![image](https://user-images.githubusercontent.com/1469198/104133624-77c7a980-538d-11eb-9cd4-0c2217e55ea8.png)
+
+---
+
 
 
 
