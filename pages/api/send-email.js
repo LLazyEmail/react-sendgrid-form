@@ -5,7 +5,7 @@ export default async (req, res) => {
     if (req.method === 'POST') {
       const { body } = req;
       console.log(body);
-      // await sendEmail(body);
+      await sendEmail(body);
       return res.status(200).end();
     }
   } catch (error) {
