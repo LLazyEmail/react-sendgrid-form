@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Image, Row, Col, Spin } from 'antd';
 import Notification from '../../../utils/notifications';
+import EmailInput from '../../UI/EmailInput';
 
 const { Title } = Typography;
 
@@ -53,18 +54,8 @@ const GotFlaggedAsBaa = () => {
               <Input />
             </Form.Item>
 
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input correct email!'
-                }
-              ]}
-            >
-              <Input />
-            </Form.Item>
+            <EmailInput />
+            
             <Form.Item
               label="First Name"
               name="first_name"

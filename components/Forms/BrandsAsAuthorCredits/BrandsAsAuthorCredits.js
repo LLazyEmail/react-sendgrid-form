@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Spin, Row, Col, Image } from 'antd';
 import Notification from '../../../utils/notifications';
+import EmailInput from '../../UI/EmailInput';
 
 const { Title } = Typography;
 
@@ -41,19 +42,7 @@ const BrandsAsAuthorCredits = () => {
               <Input />
             </Form.Item>
 
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  type: 'email',
-                  message: 'Email is required!'
-                }
-              ]}
-            >
-              <Input />
-            </Form.Item>
+            <EmailInput />
 
             <Form.Item>
               {isLoading ? (
