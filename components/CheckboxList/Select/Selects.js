@@ -19,6 +19,7 @@ const Selects = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const handleChange = selectedItems => {
+    console.log(selectedItems);
     setSelectedItems(selectedItems);
   };
   
