@@ -54,6 +54,11 @@ const Nav = () => (
           <a>Plagiarism on Hacker Noon</a>
         </Link>
       </Menu.Item>
+      <Menu.Item key="10">
+        <Link href="/baa/docs-selectlist">
+          <a>Select List (Google Form)</a>
+        </Link>
+      </Menu.Item>
     </Menu>
   </>
 );

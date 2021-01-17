@@ -19,6 +19,7 @@ const Selects = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const handleChange = selectedItems => {
+    console.log(selectedItems);
     setSelectedItems(selectedItems);
   };
   
@@ -29,7 +30,7 @@ const Selects = () => {
         placeholder="Select categories"
         value={selectedItems}
         onChange={handleChange}
-        style={{ width: '100%' }}
+        style={{ width: '100%', margin: '0 0 20px 0' }}
       >
         {filteredOptions.map(item => (
           <Select.Option key={item} value={item}>

@@ -9,6 +9,7 @@ import Old2019 from 'components/Forms/Old2019';
 import PromotionalStoryDetected from 'components/Forms/PromotionalStoryDetected';
 import BrandsAsAuthorRejected from 'components/Forms/BrandsAsAuthorRejected';
 import PlagiarismOnHackerNoon from 'components/Forms/PlagiarismOnHackerNoon';
+import SelectListForm from '../../components/Forms/SelectListForm';
 
 const Forms = () => {
   const router = useRouter();
@@ -34,8 +35,10 @@ const Forms = () => {
             return <BrandsAsAuthorRejected />;
           case 'hackernoon-enquiry':
             return <HackerNoonEnquiry />;
-            case 'hackernoon-plagiarism':
-                return <PlagiarismOnHackerNoon/>;
+          case 'hackernoon-plagiarism':
+            return <PlagiarismOnHackerNoon/>;
+          case 'docs-selectlist':
+            return <SelectListForm/>;
           default:
             return null;
         }
