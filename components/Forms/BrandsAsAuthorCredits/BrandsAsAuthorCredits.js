@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Spin, Row, Col, Image } from 'antd';
+import { Form, Input, Typography, Row, Col, Image } from 'antd';
 import Notification from '../../../utils/notifications';
 import EmailInput from '../../UI/EmailInput';
 import ButtonComponent from '../../UI/ButtonComponent';
