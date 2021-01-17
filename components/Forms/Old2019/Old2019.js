@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Input, Typography, Image, Row, Col } from 'antd';
-import Notification from '../../../utils/notifications';
-import EmailInput from '../../UI/EmailInput';
-import ButtonComponent from '../../UI/ButtonComponent';
+import Notification from 'utils/notifications';
+import EmailInput from 'components/UI/EmailInput';
+import ButtonComponent from 'components/UI/ButtonComponent';
 
 const { Title } = Typography;
 
-const Old2019 = () => {
+const Old2019 = ({ email }) => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({ email, type }) => {
     try {
@@ -45,7 +45,7 @@ const Old2019 = () => {
             }}
             onFinish={onFinish}
           >
-            <EmailInput />
+            <EmailInput email={email} />
 
             <Form.Item label="type" hidden name="type" initialValue={1}>
               <Input />

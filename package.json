@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint . --ext js,jsx . --ignore-path ./.eslintignore",
     "lint:fix": "eslint --fix . --ignore-path ./.eslintignore"
   },
@@ -12,12 +13,12 @@
     "@ant-design/icons": "4.3.0",
     "@next/bundle-analyzer": "10.0.5",
     "@sendgrid/mail": "7.4.2",
-    "antd": "4.10.2",
+    "antd": "^4.10.2",
     "babel-plugin-import": "1.13.3",
     "cross-env": "7.0.3",
     "dayjs": "1.10.3",
     "esm": "3.2.25",
-    "next": "latest",
+    "next": "^10.0.5",
     "postcss-preset-env": "6.7.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"

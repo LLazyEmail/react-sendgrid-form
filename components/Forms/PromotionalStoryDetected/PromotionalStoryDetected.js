@@ -6,7 +6,7 @@ import ButtonComponent from 'components/UI/ButtonComponent';
 
 const { Title } = Typography;
 
-const PromotionalStoryDetected = () => {
+const PromotionalStoryDetected = ({ email }) => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({ type, email, full_name, url, time }) => {
     try {
@@ -48,7 +48,7 @@ const PromotionalStoryDetected = () => {
               <Input />
             </Form.Item>
 
-            <EmailInput />
+            <EmailInput email={email} />
 
             <Form.Item
               label="Full Name"

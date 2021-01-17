@@ -6,7 +6,7 @@ import ButtonComponent from '../../UI/ButtonComponent';
 
 const { Title } = Typography;
 
-const PlagiarismOnHackerNoon = () => {
+const PlagiarismOnHackerNoon = ({ email }) => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({ email, type }) => {
     try {
@@ -46,7 +46,7 @@ const PlagiarismOnHackerNoon = () => {
             onFinish={onFinish}
           >
 
-            <EmailInput />
+            <EmailInput email={email} />
             
             <Form.Item label="type" hidden name="type" initialValue={1}>
               <Input />
