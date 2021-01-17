@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form, Input } from 'antd';
 
-const EmailInput = () => (
+const EmailInput = ({ email }) => (
         <Form.Item
+              initialValue={email || ''}
               label='Email'
               name='email'
               rules={[

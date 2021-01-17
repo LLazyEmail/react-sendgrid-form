@@ -6,7 +6,7 @@ import ButtonComponent from '../../UI/ButtonComponent';
 
 const { Title } = Typography;
 
-const GotFlaggedAsBaa = () => {
+const GotFlaggedAsBaa = ({ email }) => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({
     type,
@@ -55,7 +55,7 @@ const GotFlaggedAsBaa = () => {
               <Input />
             </Form.Item>
 
-            <EmailInput />
+            <EmailInput email={email} />
             
             <Form.Item
               label="First Name"

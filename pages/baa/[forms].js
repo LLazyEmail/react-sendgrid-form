@@ -13,32 +13,32 @@ import SelectListForm from '../../components/Forms/SelectListForm';
 
 const Forms = () => {
   const router = useRouter();
-  const { forms } = router.query;
+  const { forms, email } = router.query;
 
   return (
     <>
       {(() => {
         switch (forms) {
           case 'old-2019':
-            return <Old2019 />;
+            return <Old2019 email={email} />;
           case 'credits-finished':
-            return <BaaCreditsFinished />;
+            return <BaaCreditsFinished email={email} />;
           case 'got-flagged':
-            return <GotFlaggedAsBaa />;
+            return <GotFlaggedAsBaa email={email} />;
           case 'promo-story':
-            return <PromotionalStoryDetected />;
+            return <PromotionalStoryDetected email={email} />;
           case 'credits-purchased':
-            return <BrandsAsAuthorCredits />;
+            return <BrandsAsAuthorCredits email={email} />;
           case 'story-submitted':
-            return <BrandsAsAuthorStory />;
+            return <BrandsAsAuthorStory email={email} />;
           case 'story-rejected':
-            return <BrandsAsAuthorRejected />;
+            return <BrandsAsAuthorRejected email={email} />;
           case 'hackernoon-enquiry':
             return <HackerNoonEnquiry />;
           case 'hackernoon-plagiarism':
-            return <PlagiarismOnHackerNoon/>;
+            return <PlagiarismOnHackerNoon email={email} />;
           case 'docs-selectlist':
-            return <SelectListForm/>;
+            return <SelectListForm />;
           default:
             return null;
         }

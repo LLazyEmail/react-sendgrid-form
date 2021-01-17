@@ -6,7 +6,7 @@ import ButtonComponent from '../../UI/ButtonComponent';
 
 const { Title } = Typography;
 
-const BrandsAsAuthorStory = () => {
+const BrandsAsAuthorStory = ({ email }) => {
   const [isLoading, setIsLoading] = useState(false);
   const onFinish = async ({ type, email, handle, storyTitle, hasCredits }) => {
     try {
@@ -47,7 +47,7 @@ const BrandsAsAuthorStory = () => {
                     <Input />
                 </Form.Item>
 
-                <EmailInput />
+                <EmailInput email={email} />
 
                 <Form.Item
                     label="Handle"
