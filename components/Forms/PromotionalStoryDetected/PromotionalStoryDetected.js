@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Image, Row, Col, Spin } from 'antd';
+import { Form, Input, Typography, Image, Row, Col } from 'antd';
 import Notification from '../../../utils/notifications';
+import EmailInput from '../../UI/EmailInput';
+import ButtonComponent from 'components/UI/ButtonComponent';
 
 const { Title } = Typography;
 
@@ -46,18 +48,8 @@ const PromotionalStoryDetected = () => {
               <Input />
             </Form.Item>
 
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: 'Email is required!'
-                }
-              ]}
-            >
-              <Input />
-            </Form.Item>
+            <EmailInput />
+
             <Form.Item
               label="Full Name"
               name="full_name"
@@ -95,19 +87,8 @@ const PromotionalStoryDetected = () => {
               <Input />
             </Form.Item>
 
-            <Form.Item>
-              {isLoading ? (
-                <Spin tip="Submiting...">
-                  <Button type="primary" htmlType="submit" block>
-                    Submit form
-                  </Button>
-                </Spin>
-              ) : (
-                <Button type="primary" htmlType="submit" block>
-                  Submit form
-                </Button>
-              )}
-            </Form.Item>
+            <ButtonComponent isLoading={isLoading} />
+
           </Form>
         </Col>
         <Col xs={{ span: 20, offset: 2 }} lg={{ span: 10 }}>

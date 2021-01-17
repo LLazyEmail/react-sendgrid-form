@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Typography, DatePicker } from 'antd';
 import CheckboxGroup from './CheckboxGroup';
+import EmailInput from 'components/UI/EmailInput';
 
 const { Title } = Typography;
 const { RangePicker } = DatePicker;
@@ -40,18 +41,9 @@ const HackerNoonEnquiry = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item
-          label="Your Email Address"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: 'Please input your Email Address!'
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
+
+        <EmailInput />
+        
         <Form.Item
           label="Your Company Name"
           name="company"
