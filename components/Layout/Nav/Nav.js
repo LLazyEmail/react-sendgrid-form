@@ -55,11 +55,6 @@ const Nav = () => (
         </Link>
       </Menu.Item>
       <Menu.Item key="10">
-        <Link href="/baa/docs-checkboxlist">
-          <a>Checkbox List (Google Form)</a>
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="11">
         <Link href="/baa/docs-selectlist">
           <a>Select List (Google Form)</a>
         </Link>

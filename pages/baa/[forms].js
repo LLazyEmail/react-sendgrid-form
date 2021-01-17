@@ -9,7 +9,6 @@ import Old2019 from 'components/Forms/Old2019';
 import PromotionalStoryDetected from 'components/Forms/PromotionalStoryDetected';
 import BrandsAsAuthorRejected from 'components/Forms/BrandsAsAuthorRejected';
 import PlagiarismOnHackerNoon from 'components/Forms/PlagiarismOnHackerNoon';
-import CheckboxListForm from '../../components/Forms/CheckboxListForm';
 import SelectListForm from '../../components/Forms/SelectListForm';
 
 const Forms = () => {
@@ -38,8 +37,6 @@ const Forms = () => {
             return <HackerNoonEnquiry />;
           case 'hackernoon-plagiarism':
             return <PlagiarismOnHackerNoon/>;
-          case 'docs-checkboxlist':
-            return <CheckboxListForm/>;
           case 'docs-selectlist':
             return <SelectListForm/>;
           default:
