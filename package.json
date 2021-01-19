@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix . --ignore-path ./.eslintignore"
   },
   "dependencies": {
-    "@ant-design/icons": "4.3.0",
+    "@ant-design/icons": "4.4.0",
     "@next/bundle-analyzer": "10.0.5",
     "@sendgrid/mail": "7.4.2",
     "antd": "4.10.3",
