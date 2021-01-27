@@ -34,7 +34,7 @@ const SelectListForm = () => {
             <Row justify="center">
                 <Title level={2}>Select List Form</Title>
             </Row>
-            <div style={{width: '500px'}}>
+            <div style={{width: '40vw'}}>
                 <Col xs={{ span: 20, offset: 2}} lg={{ span: 20, offset: 2 }}>
                     <Form
                         name="basic"

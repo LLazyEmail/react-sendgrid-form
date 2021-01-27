@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Select } from 'antd';
+import { Select, Input } from 'antd';
+
+const { TextArea } = Input;
 
 const OPTIONS = [
     'programming', 'startups',
@@ -25,19 +27,22 @@ const Selects = () => {
   
   const filteredOptions = OPTIONS.filter(o => !selectedItems.includes(o));
   return (
-      <Select
-        mode="multiple"
-        placeholder="Select categories"
-        value={selectedItems}
-        onChange={handleChange}
-        style={{ width: '100%', margin: '0 0 20px 0' }}
-      >
-        {filteredOptions.map(item => (
-          <Select.Option key={item} value={item}>
-            {item}
-          </Select.Option>
-        ))}
-      </Select>
+      <>
+        <Select
+            mode="multiple"
+            placeholder="Select categories"
+            value={selectedItems}
+            onChange={handleChange}
+            style={{ width: '100%', margin: '0 0 20px 0' }}
+        >
+            {filteredOptions.map(item => (
+                <Select.Option key={item} value={item}>
+                    {item}
+                </Select.Option>
+            ))}
+        </Select>
+        <TextArea rows={5} style={{marginBottom: '20px'}} />
+      </>
   )
 }
 
