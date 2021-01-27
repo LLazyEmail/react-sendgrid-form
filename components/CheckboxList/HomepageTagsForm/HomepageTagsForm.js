@@ -17,7 +17,7 @@ const OPTIONS = [
     'artificial-intelligence', 'amazon'
 ];
 
-const Selects = () => {
+const HomepageTagsForm = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const handleChange = selectedItems => {
@@ -46,4 +46,4 @@ const Selects = () => {
   )
 }
 
-export default Selects;
+export default HomepageTagsForm;
