@@ -131,6 +131,13 @@ variables `none`
 
 ![image](https://user-images.githubusercontent.com/1469198/104133624-77c7a980-538d-11eb-9cd4-0c2217e55ea8.png)
 
+#### 10. Upload company logo #BAA
+Template ID: d-33edeaf8e9be4e1a8bf1fc8138436aae
+
+variables `none`
+
+<img src="public/form-images/baa-upload-logo.png" alt="image">
+
 ---
 
 
