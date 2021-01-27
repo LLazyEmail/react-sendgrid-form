@@ -9,7 +9,8 @@ import Old2019 from 'components/Forms/Old2019';
 import PromotionalStoryDetected from 'components/Forms/PromotionalStoryDetected';
 import BrandsAsAuthorRejected from 'components/Forms/BrandsAsAuthorRejected';
 import PlagiarismOnHackerNoon from 'components/Forms/PlagiarismOnHackerNoon';
-import SelectListForm from '../../components/Forms/SelectListForm';
+import SelectListForm from 'components/Forms/SelectListForm';
+import UploadCompanyLogo from 'components/Forms/UploadCompanyLogo';
 
 const Forms = () => {
   const router = useRouter();
@@ -39,6 +40,8 @@ const Forms = () => {
             return <PlagiarismOnHackerNoon email={email} />;
           case 'docs-selectlist':
             return <SelectListForm />;
+          case 'company-logo':
+            return <UploadCompanyLogo />;
           default:
             return null;
         }

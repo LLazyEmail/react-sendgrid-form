@@ -59,6 +59,11 @@ const Nav = () => (
           <a>Select List (Google Form)</a>
         </Link>
       </Menu.Item>
+      <Menu.Item key="11">
+        <Link href="/baa/company-logo">
+          <a>Company Logo</a>
+        </Link>
+      </Menu.Item>
     </Menu>
   </>
 );
