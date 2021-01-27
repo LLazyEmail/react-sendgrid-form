@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Selects from '../../CheckboxList/Select/Selects';
-import { Col, Row, Typography, Form, Input } from 'antd';
+import HomepageTagsForm from '../../CheckboxList/HomepageTagsForm';
+import { Col, Row, Typography, Form } from 'antd';
 import Notification from '../../../utils/notifications';
 import ButtonComponent from '../../UI/ButtonComponent';
 
@@ -44,7 +44,7 @@ const SelectListForm = () => {
                         }}
                         onFinish={onFinish}
                     >
-                        <Selects />
+                        <HomepageTagsForm />
                         
                         <ButtonComponent isLoading={isLoading} />
                     </Form>
