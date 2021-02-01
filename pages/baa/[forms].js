@@ -11,6 +11,7 @@ import BrandsAsAuthorRejected from 'components/Forms/BrandsAsAuthorRejected';
 import PlagiarismOnHackerNoon from 'components/Forms/PlagiarismOnHackerNoon';
 import SelectListForm from 'components/Forms/SelectListForm';
 import UploadCompanyLogo from 'components/Forms/UploadCompanyLogo';
+import AllLinksForm from 'components/Forms/AllLinksForm';
 
 const Forms = () => {
   const router = useRouter();
@@ -42,6 +43,8 @@ const Forms = () => {
             return <SelectListForm />;
           case 'company-logo':
             return <UploadCompanyLogo />;
+          case 'all-links':
+            return <AllLinksForm />;
           default:
             return null;
         }

@@ -67,8 +67,15 @@ const CompanyLogo = () => (
     </Link>
 );
 
+const AllLinks = () => (
+    <Link href='/baa/all-links'>
+        <a>All Links</a>
+    </Link>
+);
+
 export {
     Old, CreditsFinished, GotFlagged, PromoStory,
     CreditsPurchased, StorySubmitted, StoryRejected,
-    HackerNoonEnquiry, Plagiarism, SelectList, CompanyLogo
+    HackerNoonEnquiry, Plagiarism, SelectList, CompanyLogo,
+    AllLinks
 }
