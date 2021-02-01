@@ -1,5 +1,9 @@
 import { Menu, Typography } from 'antd';
-import Link from 'next/link';
+import {
+  Old, CreditsFinished, GotFlagged, PromoStory,
+  CreditsPurchased, StorySubmitted, StoryRejected,
+  HackerNoonEnquiry, Plagiarism, SelectList, CompanyLogo
+} from 'components/Links/NavigationLinks/NavigationLinks';
 
 const { Title } = Typography;
 
@@ -10,59 +14,37 @@ const Nav = () => (
     </Title>
     <Menu mode="inline" theme="dark">
       <Menu.Item key="1">
-        <Link href="/baa/old-2019">
-          <a>Old 2019 version</a>
-        </Link>
+        <Old />
       </Menu.Item>
       <Menu.Item key="2">
-        <Link href="/baa/credits-finished">
-          <a>BAA Credits Finished #sponsors</a>
-        </Link>
+        <CreditsFinished />
       </Menu.Item>
       <Menu.Item key="3">
-        <Link href="/baa/got-flagged">
-          <a>got flagged as BAA #sponsors</a>
-        </Link>
+        <GotFlagged />
       </Menu.Item>
       <Menu.Item key="4">
-        <Link href="/baa/promo-story">
-          <a>Promotional story detected #writers</a>
-        </Link>
+        <PromoStory />
       </Menu.Item>
       <Menu.Item key="5">
-        <Link href="/baa/credits-purchased">
-          <a>BAA credits-purchased V1</a>
-        </Link>
+        <CreditsPurchased />
       </Menu.Item>
       <Menu.Item key="6">
-        <Link href="/baa/story-submitted">
-          <a>BAA Story Submitted #sponsors</a>
-        </Link>
+        <StorySubmitted />
       </Menu.Item>
       <Menu.Item key="7">
-        <Link href="/baa/story-rejected">
-          <a>BAA Rejected Story</a>
-        </Link>
+        <StoryRejected />
       </Menu.Item>
       <Menu.Item key="8">
-        <Link href="/baa/hackernoon-enquiry">
-          <a>Hacker Noon Enquiry Form</a>
-        </Link>
+        <HackerNoonEnquiry />
       </Menu.Item>
       <Menu.Item key="9">
-        <Link href="/baa/hackernoon-plagiarism">
-          <a>Plagiarism on Hacker Noon</a>
-        </Link>
+        <Plagiarism />
       </Menu.Item>
       <Menu.Item key="10">
-        <Link href="/baa/docs-selectlist">
-          <a>Select List (Google Form)</a>
-        </Link>
+        <SelectList />
       </Menu.Item>
       <Menu.Item key="11">
-        <Link href="/baa/company-logo">
-          <a>Company Logo</a>
-        </Link>
+        <CompanyLogo />
       </Menu.Item>
     </Menu>
   </>
