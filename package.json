@@ -16,7 +16,7 @@
     "antd": "4.21.7",
     "babel-plugin-import": "1.13.5",
     "cross-env": "7.0.3",
-    "dayjs": "1.11.3",
+    "dayjs": "1.11.4",
     "esm": "3.2.25",
     "next": "12.2.2",
     "postcss-preset-env": "7.7.2",
