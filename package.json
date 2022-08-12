@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "@ant-design/icons": "4.7.0",
-    "@next/bundle-analyzer": "12.2.4",
+    "@next/bundle-analyzer": "12.2.5",
     "@sendgrid/mail": "7.7.0",
     "antd": "4.22.3",
     "babel-plugin-import": "1.13.5",
     "cross-env": "7.0.3",
     "dayjs": "1.11.4",
     "esm": "3.2.25",
-    "next": "12.2.4",
+    "next": "12.2.5",
     "postcss-preset-env": "7.7.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
